@@ -6,6 +6,7 @@
 function singular_preprocess_page(&$vars) {
   include_once(drupal_get_path('theme', 'singular') .'/styles.inc');
   $vars['styles'] .= singular_style_css(singular_get_style_info());
+  $vars['styles_ie6'] = singular_style_ie6();
 
   $settings = theme_get_settings('singular');
   if (!empty($settings['layout'])) {
@@ -18,8 +19,12 @@ function singular_preprocess_page(&$vars) {
  */
 function singular_preprocess_node(&$vars) {
   $node = menu_get_object();
-  if ($node === $vars['node'] && !isset($_GET['print'])) {
-    unset($vars['title']);
+  if ($node === $vars['node']) {
+    $vars['attr']['class'] .= ' node-page';
+
+    if (!isset($_GET['print'])) {
+      unset($vars['title']);
+    }
   }
 }
 
@@ -42,6 +47,16 @@ function singular_style_css($info) {
   }
   $output .= "}</style>";
   return $output;
+}
+
+/**
+ * PNG transparency compatibility for IE6.
+ */
+function singular_style_ie6() {
+  $mask_path = base_path() . path_to_theme() . '/images/mask.png';
+  $property = "background:transparent; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='{$mask_path}');";
+  $linkfix = "position:relative;";
+  return "#sidebar ul.menu a { height:1%; } #main,#utility,#sidebar,#branding div.primary ul.links a,#sidebar ul.menu a.active { $property } #main a,#utility a,#sidebar a,#branding div.primary ul.links a,#sidebar ul.menu a.active { $linkfix }";
 }
 
 /**

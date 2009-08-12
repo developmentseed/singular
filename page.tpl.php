@@ -3,6 +3,11 @@
   <head>
     <?php print $head ?>
     <?php print $styles ?>
+
+    <!--[if lt IE 7]>
+    <style type="text/css" media="all"><?php print $styles_ie6 ?></style>
+    <![endif]-->
+
     <title><?php print $head_title ?></title>
   </head>
   <body <?php print drupal_attributes($attr) ?>>
@@ -31,6 +36,10 @@
     </div>
 
     <?php if ($site_name): ?><h1 class='site-name'><?php print $site_name ?></h1><?php endif; ?>
+  </div>
+
+  <div id='utility'>
+    <?php if (!empty($breadcrumb)) print $breadcrumb ?>
   </div>
 
   <div id='page'>

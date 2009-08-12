@@ -1,7 +1,7 @@
 body {
-  background:#011220 url(images/sea.png) 0% 0% repeat-x fixed;
+  background:#011220 url(images/sea.jpg) 0% 0% repeat-x fixed;
   color:#333;
-  font:15px/25px "Helvetica Neue",Arial,Helvetica,sans-serif;
+  font:13px/20px "Helvetica Neue",Arial,Helvetica,sans-serif;
   }
 
 a {
@@ -18,8 +18,8 @@ a {
   body.one-sidebar #root { width:960px; }
 
 #sidebar {
-  -moz-border-radius-topright:10px;
-  -moz-border-radius-bottomright:10px;
+  -moz-border-radius-topright:5px;
+  -moz-border-radius-bottomright:5px;
 
   font-size:13px;
   line-height:20px;
@@ -33,8 +33,8 @@ a {
   }
 
 #main {
-  -moz-border-radius:20px;
-  -moz-border-radius:20px;
+  -moz-border-radius:10px;
+  -moz-border-radius:10px;
   background:url(images/mask.png);
   width:740px;
   }
@@ -60,11 +60,6 @@ body.fluid #main {
 
 body.fluid #sidebar { width:20%; }
 
-
-/**
- * Prose text =========================================================
- */
-p { margin:0px 0px 25px; }
 
 /**
  * Branding ===========================================================
@@ -102,7 +97,8 @@ p { margin:0px 0px 25px; }
 
   #branding div.primary ul.links a {
     -moz-border-radius:10px;
-    background:#111;
+    -webkit-border-radius:10px;
+    background:url(images/mask.png);
     padding:0px 15px;
     }
 
@@ -116,12 +112,31 @@ p { margin:0px 0px 25px; }
   }
 
 /**
+ * Breadcrumb =========================================================
+ */
+#utility {
+  -moz-border-radius-topleft:5px;
+  -moz-border-radius-topright:5px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-top-right-radius:5px;
+
+  color:#ccc;
+  background:url(images/mask.png);
+  padding:0px 5px;
+  line-height:30px;
+  font-weight:300;
+  text-transform:lowercase;
+  }
+
+#utility a {
+  margin:0px 5px;
+  color:#fff;
+  }
+
+/**
  * Page ===============================================================
  */
-#page {
-  -moz-border-radius:5px;
-  background:#fff;
-  }
+#page { background:#fff; }
 
 /**
  * Tabs ===============================================================
@@ -236,14 +251,16 @@ div.left div.admin-panel { margin-right:10px; }
   background:url(images/close.png) no-repeat;
   }
 
+  #growl div.autoclose span.close { display:none; }
+
 #growl div.messages {
-  -moz-border-radius:10px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+
   margin:5px 0px;
   background:#eff;
   opacity:.9;
   padding:20px;
-
-  cursor:pointer;
   }
 
 #growl div.error { background:#fee; }
@@ -291,7 +308,6 @@ dl dd {
 #sidebar a { color:#adf; }
 #sidebar a:hover { color:#fff; }
 
-
 #sidebar div.block {
   padding:10px 10px 10px 0px;
   -moz-border-radius-topleft:5px;
@@ -301,10 +317,10 @@ dl dd {
   }
 
 #sidebar div.block h2.block-title {
-  padding:5px 10px 4px;
-  margin:0px 0px 1px;
-  background:url(images/mask.png);
-  font-size:13px;
+  padding:0px 10px 10px;
+  background:url(images/dots.png) 0px 100% repeat-x;
+  font-size:18px;
+  font-weight:300;
   }
 
 /* Menu blocks */
@@ -319,8 +335,8 @@ dl dd {
   }
 
 #sidebar ul.menu a.active {
-  background:#fff;
-  color:#333;
+  background:url(images/mask.png);
+  color:#fff;
   }
 
 #sidebar ul.menu li li a {
@@ -339,6 +355,23 @@ div.block ul.menu li li li li li li li li a { padding-left:80px; }
 /**
  * Nodes ==============================================================
  */
+div.node {
+  padding:0px 0px 19px;
+  margin:0px 0px 20px;
+  border-bottom:1px solid #ddd;
+  }
+
+  div.node-page {
+    margin:0px;
+    padding:0px;
+    border:0px;
+    }
+
+h2.node-title {
+  font-weight:300;
+  font-size:18px;
+  }
+
 div.node-links,
 div.node-submitted {
   color:#666;
@@ -361,7 +394,7 @@ div.node-links ul.links {
 
 div.node div.field { margin:0px 0px 10px; }
 
-div.prose { line-height:25px; }
+div.prose { line-height:20px; }
 
 /**
  * Pagers =============================================================
