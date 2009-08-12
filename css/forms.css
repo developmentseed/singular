@@ -31,7 +31,8 @@ div.buttons { text-align:center; }
 .form-select {
   width:90%;
   padding:5px;
-  border:1px solid #ccc; border-top-color:#999;
+  border:1px solid #ccc;
+  border-top-color:#999;
   background:#fff;
   color:#333;
   }
@@ -51,31 +52,9 @@ div.buttons { text-align:center; }
   #content div.filter-options select { padding:0px; }
 
 /* Simple form items */
-#content div.form-item { margin:0px 0px 20px; }
-#content div.form-option,
-#content table div.form-item { margin:0px; }
-
-/* Nicer checkboxes */
-#ucreate-user-form div.form-checkboxes div.form-option,
-#spaces-og-user-groups-form div.form-checkboxes div.form-option {
-  margin:0px 0px 5px;
-  width:25%;
-  float:left;
-  }
-
-#ucreate-user-form div.form-checkboxes div.form-option label,
-#spaces-og-user-groups-form div.form-checkboxes div.form-option label {
-  display:block;
-  padding:5px;
-  margin:0px 5px 0px 0px;
-
-  white-space:nowrap;
-  overflow:hidden;
-
-  -webkit-border-radius:3px;
-  -moz-border-radius:3px;
-  background:#f8f8f8;
-  }
+#content div.form-item { margin-bottom:20px; }
+#content div.form-option { margin-bottom:10px; }
+#content table div.form-item { margin-bottom:0px; }
 
 /**
  * FIELDSETS  =========================================================
@@ -88,7 +67,6 @@ form table {
   margin:0px 0px 10px;
   }
 
-div.form #right div.form-item label,
 div.fieldset h2.fieldset-title {
   background:transparent;
   font-size:11px;
@@ -96,7 +74,6 @@ div.fieldset h2.fieldset-title {
   padding:5px;
   }
 
-  div.form #right div.form-item label { padding:0px; }
 
 div.fieldset div.fieldset-content {
   background:transparent;
@@ -106,25 +83,6 @@ div.fieldset div.fieldset-content {
 
 div.fieldset table { background:#eee; }
 
-div.form #right div.form-item,
-div.form #right div.fieldset {
-  background: #f8f8f8 url(images/bleeds.png) 0% 100% repeat-x;
-  margin:0px;
-  padding:5px 10px;
-  border:0px;
-  border-bottom:1px solid #ddd;
-  }
-
-  div.form #right div.fieldset div.fieldset-content,
-  div.form #right div.fieldset h2.fieldset-title { padding:0px; }
-
-  div.form #right div.fieldset div.form-item {
-    background:transparent;
-    border:0px;
-    padding:0px;
-    margin:0px 0px 10px;
-    }
-
 /**
  * FORM CSS REPAIRS FOR OTHERS ========================================
  */
@@ -132,76 +90,9 @@ div.form #right div.fieldset {
 /* Admin filter forms */
 div.container-inline div { display:inherit; }
 
-/* Date module is confused about itself */
-#content div.container-inline-date {
-  float:left;
-  clear:none;
-  }
-
-/* Input filter options */
-#content div.filter-target div.form-item {
-  padding-bottom:0px;
-  margin:0px;
-  border:0px;
-  }
-
-#content div.filter-options { margin:0px; }
-
-/* Spaces form messages */
-div.form div.form-message {
-  color:#666;
-  background:#f8f8f8;
-  border-bottom:1px solid #ddd;
-  line-height:25px;
-  padding:10px 10px 9px;
-  }
-
-  div.form div.form-message-public span.icon,
-  div.form div.form-message-private span.icon {
-    float:left;
-    width:25px;
-    height:25px;
-    margin-right:10px;
-    background: url(images/sprite_base.png) -30px 0px no-repeat;
-    }
-
-    div.form div.form-message-public span.icon { background-position: -55px 0px; }
-
-/* Dashboard form */
-form#spaces-customize-form h3 {
-  font-weight:bold;
-  font-size:15px;
-  line-height:30px;
-  }
-
-form#spaces-customize-form div.region-right {
-  float:right;
-  width:33%;
-  }
-
-form#spaces-customize-form div.region-content {
-  float:left;
-  width:66%;
-  }
-
 /* Login form */
 form#user-pass input.form-text,
 form#user-login input.form-text { font-size:18px; }
-
-/* Forms in sidebar blocks */
-#right div.block div.form-item {
-  display:inline;
-  vertical-align:middle;
-  }
-
-#right div.block form option { display:block; }
-
-#right div.block form select,
-#right div.block form input.form-text,
-#right div.block form textarea {
-  font-size:11px;
-  width:95%;
-  }
 
 /**
  * Preview theming ====================================================
