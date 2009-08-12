@@ -1,0 +1,394 @@
+body {
+  background:#011220 url(images/sea.png) 0% 0% repeat-x fixed;
+  color:#333;
+  font:15px/25px "Helvetica Neue",Arial,Helvetica,sans-serif;
+  }
+
+a {
+  color:#489;
+  text-decoration:none;
+  }
+
+#root {
+  padding:30px 0px 60px;
+  margin:0px auto;
+  width:740px;
+  }
+
+  body.one-sidebar #root { width:960px; }
+
+#sidebar {
+  -moz-border-radius-topright:10px;
+  -moz-border-radius-bottomright:10px;
+
+  font-size:13px;
+  line-height:20px;
+
+  background:url(images/mask.png);
+  color:#fff;
+
+  margin:100px 0px 0px;
+  float:right;
+  width:220px;
+  }
+
+#main {
+  -moz-border-radius:20px;
+  -moz-border-radius:20px;
+  background:url(images/mask.png);
+  width:740px;
+  }
+
+  body.one-sidebar #main { float:left; }
+
+div.limiter {
+  width:auto;
+  margin:0px;
+  padding:0px 10px;
+  }
+
+/* Fluid width layout */
+body.fluid #root {
+  width:auto;
+  margin:0px 20px;
+  }
+
+body.fluid #main {
+  width:80%;
+  margin:0px auto;
+  }
+
+body.fluid #sidebar { width:20%; }
+
+
+/**
+ * Prose text =========================================================
+ */
+p { margin:0px 0px 25px; }
+
+/**
+ * Branding ===========================================================
+ */
+#branding { padding:0px 10px 0px; }
+
+#branding a { color:#fff; }
+
+#branding div.secondary {
+  padding:20px 0px 10px;
+  height:20px;
+  line-height:20px;
+
+  font-size:11px;
+  overflow:hidden;
+  }
+
+  #branding div.secondary ul.links { float:right; }
+
+  #branding div.secondary ul.links li a {
+    border-left:1px solid #111;
+    padding:0px 10px 0px 9px;
+    }
+
+  #branding div.secondary ul.links li.first a { border:0px; }
+
+#branding div.primary ul.links {
+  height:40px;
+  line-height:40px;
+  padding:10px 0px;
+  float:right;
+  }
+
+  #branding div.primary ul.links li { padding-left:5px; }
+
+  #branding div.primary ul.links a {
+    -moz-border-radius:10px;
+    background:#111;
+    padding:0px 15px;
+    }
+
+    #branding div.primary ul.links a:hover { background:#39b; }
+
+#branding h1.site-name {
+  font-size:28px;
+  font-weight:300;
+  letter-spacing:-1px;
+  line-height:60px;
+  }
+
+/**
+ * Page ===============================================================
+ */
+#page {
+  -moz-border-radius:5px;
+  background:#fff;
+  }
+
+/**
+ * Tabs ===============================================================
+ */
+div.page-header { padding:10px 20px; }
+
+div.page-header h2.page-title {
+  padding:10px 0px;
+  font-size:24px;
+  font-weight:bold;
+  letter-spacing:-1px;
+  }
+
+div.page-header ul.links {
+  border-top:1px solid #ddd;
+  padding:9px 0px 10px;
+  }
+
+div.page-header ul.links li a { padding:0px 20px 0px 0px; }
+
+div.page-header ul.links li.active a {
+  font-weight:bold;
+  color:#333;
+  }
+
+/**
+ * Admin ==============================================================
+ */
+div.admin div.right,
+div.admin div.left {
+  width:50%;
+  float:left;
+  }
+
+div.admin-panel {
+  margin:0px 0px 10px;
+  padding:10px;
+  background:#fff;
+  }
+
+div.right div.admin-panel { margin-left:10px; }
+div.left div.admin-panel { margin-right:10px; }
+
+/**
+ * Page content =======================================================
+ */
+#page #content {
+  background:#f8f8f8;
+  border-top:1px solid #ddd;
+  padding:19px 20px 20px;
+
+  -moz-border-radius-bottomleft:5px;
+  -moz-border-radius-bottomright:5px;
+  }
+
+#page #content div.block {
+  margin:20px 0px 0px;
+  border-top:1px solid #ddd;
+  padding:19px 0px 0px;
+  }
+
+#page #content h2.block-title {
+  font-weight:300;
+  font-size:18px;
+  margin:0px 0px 10px;
+  }
+
+#page #content div.block-content {
+  -moz-border-radius:10px;
+  background:#fff;
+  padding:10px;
+  }
+
+/**
+ * Footer =============================================================
+ */
+#footer {
+  text-align:center;
+  color:#fff;
+  font-size:13px;
+  line-height:20px;
+  padding:20px 10px 60px;
+  }
+
+#footer a { color:#adf; }
+#footer a:hover { color:#fff; }
+
+/**
+ * Popup messages =====================================================
+ */
+#growl {
+  font-size:13px;
+  line-height:20px;
+
+  position:fixed;
+  right:10px;
+  top:10px;
+  width:300px;
+  z-index:100;
+  }
+
+#growl div.messages span.close {
+  float:right;
+
+  width:20px;
+  height:20px;
+  display:block;
+
+  overflow:hidden;
+  text-indent:-999px;
+
+  background:url(images/close.png) no-repeat;
+  }
+
+#growl div.messages {
+  -moz-border-radius:10px;
+  margin:5px 0px;
+  background:#eff;
+  opacity:.9;
+  padding:20px;
+
+  cursor:pointer;
+  }
+
+#growl div.error { background:#fee; }
+
+/**
+ * Tables =============================================================
+ */
+table {
+  border:5px solid #fff;
+  background:#f0f8fa;
+  font-size:13px;
+  margin:0px 0px 20px;
+  }
+
+  div.block table { margin:0px; }
+
+table tr.odd { background:#f0f8fa; }
+
+table thead tr,
+table tr.even { background:#f6fbfc; }
+
+table td,
+table th {
+  border:1px solid #fff;
+  padding:5px 10px 4px;
+  vertical-align:top;
+  }
+
+table.views-view-grid .views-field-title {
+  font-size:18px;
+  font-weight:bold;
+  }
+
+/**
+ * Lists ==============================================================
+ */
+dl dd {
+  padding-left:20px;
+  font-size:13px;
+  }
+
+/**
+ * Blocks =============================================================
+ */
+#sidebar a { color:#adf; }
+#sidebar a:hover { color:#fff; }
+
+
+#sidebar div.block {
+  padding:10px 10px 10px 0px;
+  -moz-border-radius-topleft:5px;
+  -moz-border-radius-bottomleft:5px;
+  -webkit-border-top-left-radius:5px;
+  -webkit-border-bottom-left-radius:5px;
+  }
+
+#sidebar div.block h2.block-title {
+  padding:5px 10px 4px;
+  margin:0px 0px 1px;
+  background:url(images/mask.png);
+  font-size:13px;
+  }
+
+/* Menu blocks */
+#sidebar div#block-user-1 div.block-content,
+#sidebar div.block-menu div.block-content { padding:0px; }
+
+#sidebar ul.menu a {
+  font-size:13px;
+  display:block;
+  padding:5px 5px 5px 10px;
+  background:url(images/dots.png) 0px 100% repeat-x;
+  }
+
+#sidebar ul.menu a.active {
+  background:#fff;
+  color:#333;
+  }
+
+#sidebar ul.menu li li a {
+  font-size:11px;
+  line-height:20px;
+  padding-left:20px;
+  }
+
+div.block ul.menu li li li a { padding-left:30px; }
+div.block ul.menu li li li li a { padding-left:40px; }
+div.block ul.menu li li li li li a { padding-left:50px; }
+div.block ul.menu li li li li li li a { padding-left:60px; }
+div.block ul.menu li li li li li li li a { padding-left:70px; }
+div.block ul.menu li li li li li li li li a { padding-left:80px; }
+
+/**
+ * Nodes ==============================================================
+ */
+div.node-links,
+div.node-submitted {
+  color:#666;
+  font-size:13px;
+  }
+
+div.node-submitted { margin:0px 0px 20px; }
+
+div.node-links ul.links {
+  margin:20px 0px 0px;
+  -moz-border-radius:5px;
+  background:#fff;
+  float:right;
+  }
+
+  div.node-links ul.links li a {
+    float:left;
+    padding:0px 10px;
+    }
+
+div.node div.field { margin:0px 0px 10px; }
+
+div.prose { line-height:25px; }
+
+/**
+ * Pagers =============================================================
+ */
+#content div.pager {
+  background:#fff;
+  padding:5px;
+  margin:10px 0px;
+
+  font-size:13px;
+  line-height:30px;
+  }
+
+#content div.pager ul.pager-links,
+#content div.pager ul.pager-list {
+  margin:0px;
+  padding:0px;
+  float:left;
+  }
+
+#content div.pager ul.pager-links { float:right; }
+
+#content div.pager li.pager-current,
+#content div.pager a {
+  padding:0px 10px;
+  margin-right:1px;
+  }
+
+#content div.pager li.pager-current { background:#f0f8fa; }
+#content div.pager a:hover { background:#f6fbfc; }

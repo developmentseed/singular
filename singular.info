@@ -1,0 +1,17 @@
+; $Id$
+name = "Singular"
+description = "Simple theme based on tao."
+version = "1.1"
+core = "6.x"
+engine = "phptemplate"
+base theme = "tao"
+
+stylesheets[screen][] = "style.css"
+stylesheets[screen][] = "css/forms.css"
+
+scripts[] = "js/theme.js"
+
+regions[content] = "Content"
+regions[right] = "Sidebar"
+
+features[] = ""
