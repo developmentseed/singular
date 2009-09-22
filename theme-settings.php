@@ -37,7 +37,7 @@ function singular_settings($settings) {
     '#type' => 'fieldset',
     '#tree' => FALSE,
     '#title' => t('Autoclose messages'),
-    '#descriptions' => t('Select the message types to close automatically after a few seconds.'),
+    '#description' => t('Select the message types to close automatically after a few seconds.'),
   );
   $form['messages']['autoclose'] = array(
     '#type' => 'checkboxes',
